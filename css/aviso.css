@@ -1,0 +1,436 @@
+.modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 1s 2s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99999;
+}
+
+.contenido {  
+  margin: 40px auto;
+  max-width: 750px;
+  max-height: 550px;  
+  border-radius: 10px;
+}
+
+.contenido img{
+    width: 100%;
+    height: auto;
+}
+
+@media(max-width:720px){
+	
+  .contenido {  
+  margin: 80px auto;
+  max-width: 95%;
+  max-height: auto;  
+  border-radius: 10px;
+}
+	
+	
+}
+
+
+#cerrar {
+  display: none;
+}
+
+#cerrar + label {
+  position: fixed;
+  color: #fff;
+  font-size: 25px;
+  z-index: 50;
+  background: black;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  animation: modal 2s 3s forwards;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100000;
+  top: 0;
+  left: 50%;
+  margin: 15px auto;
+}
+
+#cerrar:checked + label,
+#cerrar:checked ~ .modal {
+  display: none;
+}
+
+@keyframes modal {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.flex-form {
+	max-width: 100%;
+	border: 2px solid #e8e8e8;
+	padding: 20px;
+	margin:auto;
+	background:#fff;	
+	font-size: 20px;
+	position: relative;
+	border-radius: 20px;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);	
+}
+
+.flex-form .oficinas a {
+    color: #c20430;
+    display: block;
+    font-size: 15px;   
+    margin: auto;
+}
+
+.aviso-importante{
+	width: 70%;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+
+.columna-2 {
+    width: 100%;
+    padding: 7px;
+}
+
+.titulo-aviso {
+    font-size: 25px;
+    font-weight: bold;
+	color:#FF0004;
+}
+
+.txt-aviso span{
+	color:#FF0004;
+	font-weight: 700;
+}
+
+.txt-aviso {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.bg-gris {
+    background-color: #e1e1e1;
+}
+
+.fila-verde {
+    padding: 16px;
+    background-color: #e2e9e2;
+    color: #396941;
+    font-size: 16px;
+}
+
+.columna {
+	 width: 100%; 
+		text-align: center;
+		padding: 20px;
+}
+
+.columna a{
+    color: #396941;
+}
+
+.columna-requisitos {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+.columna-requisitos .text-n {
+    font-weight: bold;
+    color: #396941;
+    font-size: 16px;
+}
+
+.columna-requisitos .text-p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.titulo-verde {
+    padding: 10px 0px;
+    font-weight: bold;
+    color: #396941;
+    font-size: 16px;
+}
+
+.columna-info-aviso {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    text-align: justify;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.oficinas {
+    float: right;
+    width: 29%;
+    font-size: 16px;
+    top: 30px;
+    position: absolute;
+    right: 10px;
+    height: 680px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.fila-estilo-2 {
+    max-width: 100%;
+    display: flex;
+    margin: 0px auto;
+    padding: 5px 0px;
+}
+
+.fila-estilo-3 {
+	clear: both;
+    width: 100%;
+    margin: 10px 0px;
+    padding-bottom: 15px;
+	overflow-x: hidden;
+	border-bottom: solid 1px #ddd;
+}
+
+.icono-directorio {
+    width: 60px;
+    float: left;
+}
+
+.titulo-directorio {
+    width: 100%;
+    padding: 16px;
+    background-color: #e2e9e2;
+    color: #396941;
+    font-size: 20px;
+	font-weight: bold;
+    float:right;
+}
+
+.oficina-2 {
+    width: 50%;
+    padding: 5px;
+    float: left;
+}
+
+.txt-m {
+    width: 100%;
+    font-size: 12px;
+    display: block;
+}
+
+.datos {
+    width: 45%;
+    float: right;
+    display: block;
+    padding: 5px;
+}
+
+.telefono-2 {
+    width: 100%;
+    padding: 1px;
+    margin: 1px;
+}
+
+.whatsapp-2 {
+    width: 100%;
+    background-image: url("../images/aviso-importante/whatsapp.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 28px;
+    height: 20px;
+}
+
+.flex-form .oficinas .email-2 {
+	clear: both;
+    width: 90%;
+    font-size: 15px;
+    background-image: url("../images/aviso-importante/icon-email.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 28px;
+    margin: auto;
+}
+
+@media(max-width:1024px){
+	
+.flex-form {
+		max-width: 100%;		
+		padding: 10px;
+		margin:auto;
+		font-size: 16px;
+}
+	
+.aviso-importante{
+	width: 100%;
+}	
+    
+.titulo-aviso {
+    font-size: 22px;   
+}
+	
+.oficinas { 
+    width: 90%;
+    font-size: 16px;
+    top: 30px;
+    position: relative;
+    right: 10px;
+    height: 680px;
+    overflow: auto;
+}	
+
+.columna-info-aviso {
+    text-align: justify;
+    font-size: 16px;
+}
+    
+.titulo-directorio {
+    width: 90%;
+    padding: 16px;
+    background-color: #e2e9e2;
+    color: #396941;
+    font-size: 20px;
+    float: right;
+}    
+    
+.fila-estilo-2 {
+    max-width: 100%;
+    display: flex;
+    margin: 10px auto;
+    padding: 0;
+    flex-wrap: wrap;
+}
+	
+.flex-form .oficinas .email-2 {
+    width: 96%;
+    font-size: 15px;
+    background-image: url("../images/aviso-importante/icon-email.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 28px;
+    margin:0px auto;
+}
+	
+
+	
+.oficina {
+	width: 100%;
+}
+
+}
+@media(max-width:630px){
+
+		.flex-form {
+		max-width: 100%;		
+		padding: 10px;
+		margin:auto;
+		font-size: 16px;
+		}
+	
+.aviso-importante{
+	width: 100%;
+}
+    
+.titulo-aviso {
+    font-size: 20px;   
+}
+    
+.txt-aviso {
+    font-size: 16px;
+}
+    
+.columna-info-aviso {
+    width: auto;    
+    align-content: center;
+    text-align: justify;
+    font-size: 16px; 
+    padding: 10px 20px;
+    margin: 0px;
+}
+    
+.columna-requisitos {
+    width: 100%;
+    margin: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+.oficinas { 
+    width: 100%;
+    font-size: 16px;
+    top: 30px;
+    position: relative;
+    right: 0px;
+    height: 680px;
+
+}
+   
+.email-2 {
+    width: 96%;
+    font-size: 15px;
+    background-image: url("../images/aviso-importante/icon-email.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 28px;
+    margin: 0px auto;
+}
+    
+    .icono-directorio{
+        width: 100%;
+        text-align: center;
+    }   
+
+.titulo-directorio {
+    width: 100%;
+}    
+
+
+		.fila {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content:space-between;
+		}
+	
+		.fila-estilo-3 {
+		display: flex;
+		flex-wrap: wrap;		
+		margin-top: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+		}
+	
+	
+.columna {
+		width: 100%; 
+		text-align: center;
+		padding: 20px;
+}
+	
+		.fila-estilo-2 {
+		  max-width: 100%;
+		  display: flex;
+		  flex-wrap: wrap;  
+		  margin: 10px auto;
+		  padding: 5px 0px;
+		}
+
+	}
